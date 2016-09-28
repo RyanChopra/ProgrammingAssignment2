@@ -11,12 +11,12 @@ makeCacheMatrix <- function(x = matrix()) {
     x
   }
   
-  #setresult function to set the result cache
+  # function to set the results cache
   setresult <- function(result) {
     inv <<- result
   }
   
-  #getresult funtion to get the cached result
+  #funtion to get the cached results
   getresult <- function () {
     inv
   }
@@ -34,8 +34,8 @@ cacheSolve <- function(x, ...) {
     return(result)
   }
   
-  mat <- x$get()            #fetch the original matrix
-  invmat <- solve(mat,...)  #invert it
-  x$setresult(invmat)       #cache the result for next time
-  invmat                    #return the inverse
+  matrix <- x$get()            
+  invmatrix <- solve(matrix,...) 
+  x$setresult(invmatrix)       
+  invmatrix                   
 }
